@@ -17,9 +17,19 @@ We'll be using the following tools from Expo to develop apps:
 > **FYI**: We'll be using `yarn` instead of `npm` as our package manager; you can read more about the difference [here](https://www.sitepoint.com/yarn-vs-npm/)! In short, `yarn` is becoming more popular.
 > 
 
-### 2. 👾 In your terminal, type the following:
+### 2. 👾 In your terminal:
+
+Navigate to the folder you want this project to be placed in.
 
 ```
+gh repo clone Snap-Engineering-Academy-2023/react_native_lab1
+```
+
+Then go inside the new project directory
+
+```
+yarn add expo
+
 brew install watchman
 ```
 
