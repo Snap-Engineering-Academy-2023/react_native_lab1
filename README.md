@@ -21,12 +21,32 @@ We'll be using the following tools from Expo to develop apps:
 
 ```
 brew install watchman
-
-yarn global add expo
 ```
 
 > **FYI:** Watchman was developed by Facebook to watch for file changes. It'll help with hot reloading later!
-> 
+
+Make sure your yarn version is 1.22.19:
+```bash
+$ yarn -v
+1.22.19
+```
+
+<details>
+  <summary>(If you see 3.6.0 or 3.6.1, expand to see how to downgrade)</summary>
+  
+(As of July 2023) React Native isn't compatible with any yarn versions other than `1.22.19`, so even though you have a more recent version, you'll need to downgrade. We want yarn `>=3.6.1` for our React projects, but not for React Native. The global/default version of yarn should be `1.22.19` and upgrading yarn to `3.6.1` with `yarn set version stable` should be done on a per-project basis only.
+
+Start by removing the yarn project configuration from your user root (aka `~`) folder. (Hopefully this is the only place you'll need to do this, but if you try `yarn -v` and get something other than `1.22.19` later, you'll need to hunt for these files in other parent folders.)
+
+```bash
+cd ~
+
+rm -rf node_modules .yarnrc .yarnrc.yml package.json yarn.lock
+```
+
+Now that those files are cleared out, run `yarn -v`. You should get `1.22.19`, but if you get an error, run `brew install yarn` to reinstall.
+  
+</details>
 
 ### 3. 📲 On your phone, download the Expo Go app:
 
@@ -60,7 +80,7 @@ code .
 Start the development server with the following:
 
 ```
-expo start
+yarn expo start
 ```
 
 This should open up something in your web browser! In the future, you only need to run this command to get your project running.
@@ -85,7 +105,7 @@ This should open up something in your web browser! In the future, you only need 
 - yarn.lock file = more info about dependencies (stored by Yarn)
 - Yarn = package manager
 
-> **FYI** from the Expo Docs: "When you run `expo start`, Expo CLI starts Metro Bundler, which is an HTTP server that compiles the JavaScript code of our app using Babel and serves it to the Expo app. It also pops up Expo Dev Tools, a graphical interface for Expo CLI."
+> **FYI** from the Expo Docs: "When you run `yarn expo start`, Expo CLI starts Metro Bundler, which is an HTTP server that compiles the JavaScript code of our app using Babel and serves it to the Expo app. It also pops up Expo Dev Tools, a graphical interface for Expo CLI."
 > 
 
 ### 6. 👾 Make your first change.
@@ -124,8 +144,8 @@ Woohoo! You got your first mobile app running.
 ### To run 
 1. Fork this repo! 
 2. Git clone the forked repo. 
-3. In your terminal, run `yarn install`
-4. Then launch the project with `expo start` 
+3. In terminal, move to the project folder then run `yarn`
+4. Then launch the project with `yarn expo start` 
 
 ## Then try to complete the following:
 
