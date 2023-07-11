@@ -130,7 +130,7 @@ Woohoo! You got your first mobile app running.
 
 🚧  Note: instead of trying the examples on Snack, go ahead and make the changes in VSCode to the project you just created in the setup.
 
-### 1. 🌈 [Build a Screen](https://docs.expo.dev/tutorial/build-a-screen/))
+### 1. 🌈 [Build a Screen](https://docs.expo.dev/tutorial/build-a-screen/)
 ### 2.  🌠 [Picking an image](https://docs.expo.io/tutorial/image-picker/)
 
 # Part 3: Make an app about yourself.
