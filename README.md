@@ -21,14 +21,9 @@ We'll be using the following tools from Expo to develop apps:
 
 ```
 brew install watchman
-
-yarn global add expo-cli
 ```
 
 > **FYI:** Watchman was developed by Facebook to watch for file changes. It'll help with hot reloading later!
-> 
-
-> **FYI:** The second command will download the Expo CLI using yarn.
 > 
 
 ### 3. 📲 On your phone, download the Expo Go app:
